@@ -19,8 +19,9 @@ class KitchenPage(Page):
         Page.__init__(self, title)
 
     def details(self):
+        print("Title: {}".format(self.title))
         print("Client: {}".format(self.client))
-        print("Cost: {}".format(self.cost))
+        print("Cost: {}".format(self.cost), end='\n\n')
 
 
 class BathroomPage(Page):
@@ -35,16 +36,17 @@ class BathroomPage(Page):
 
 
 # driver code
-page1 = Page("option 1")
-page1.print_name()
-page1.print_word()
 
-page2 = KitchenPage("option2", "bryan", 10000)
-page2.print_name()
-page2.print_word()
-page2.details()
+# initialize pages to empty list
+pages = []
 
-page3 = BathroomPage("option3", "ethan", 213123)
-page3.print_name()
-page3.print_word()
-page3.details()
+# this should loop 5 times
+for i in range(0, 5):
+    pages.append(KitchenPage("page {}".format(i), "client {}".format(i), (1000*i)))
+    print("Appending object")
+
+for i in range(0, 5):
+    pages[i].details()
+
+# Objectives:
+# - create a bunch of KitchenPage objects
