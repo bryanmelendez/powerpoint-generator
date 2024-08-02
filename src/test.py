@@ -23,13 +23,28 @@ class KitchenPage(Page):
         print("Cost: {}".format(self.cost))
 
 
+class BathroomPage(Page):
+    def __init__(self, title, client, cost):
+        self.client = client
+        self.cost = cost
+
+        Page.__init__(self, title)
+
+    def details(self):
+        print("Example of polymorphism")
+
+
 # driver code
 page1 = Page("option 1")
-page2 = KitchenPage("option2", "bryan", 10000)
-
 page1.print_name()
 page1.print_word()
 
+page2 = KitchenPage("option2", "bryan", 10000)
 page2.print_name()
 page2.print_word()
 page2.details()
+
+page3 = BathroomPage("option3", "ethan", 213123)
+page3.print_name()
+page3.print_word()
+page3.details()
