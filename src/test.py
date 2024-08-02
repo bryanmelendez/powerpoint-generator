@@ -1,16 +1,35 @@
-class Page:
+class Page(object):
     def __init__(self, title):
         self.title = title
 
     def print_name(self):
-        print(page1.title.title())
+        print(self.title.title())
 
     def print_word(self):
         print("hello")
 
 
+class KitchenPage(Page):
+    def __init__(self, title, client, cost):
+        self.client = client
+        self.cost = cost
+
+        # you must invoke the parent class __init__
+        # at the end of the child __init__
+        Page.__init__(self, title)
+
+    def details(self):
+        print("Client: {}".format(self.client))
+        print("Cost: {}".format(self.cost))
+
+
 # driver code
 page1 = Page("option 1")
+page2 = KitchenPage("option2", "bryan", 10000)
 
 page1.print_name()
 page1.print_word()
+
+page2.print_name()
+page2.print_word()
+page2.details()

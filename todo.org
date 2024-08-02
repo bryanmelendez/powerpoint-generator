@@ -1,0 +1,7 @@
+#+title: Todo
+
+* Master TODO
+** TODO Learn classes
+** TODO class methods
+** TODO for loop
+** TODO arrays
