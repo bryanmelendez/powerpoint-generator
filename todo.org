@@ -1,7 +1,20 @@
 #+title: Todo
 
 * Master TODO
-** TODO Learn classes
-** TODO class methods
-** TODO for loop
-** TODO arrays
+** DONE Learn classes
+** DONE class methods
+** DONE for loop
+** DONE arrays
+** DONE data structures
+** TODO Start looking into pptx stuff
+** TODO Look into how to format data
+
+* Issues
+** TODO Slide dimensions
+
+* Long Term TODO
+** TODO Read image files and parse titles
+** TODO Create powerpoint slides
+** TODO Create GUI
+** TODO Figure out how to grab paths to directories from gui file manager popup
+** TODO write unit tests
