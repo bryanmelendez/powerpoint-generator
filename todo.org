@@ -6,8 +6,8 @@
 ** DONE for loop
 ** DONE arrays
 ** DONE data structures
-** TODO Start looking into pptx stuff
-** TODO Look into how to format data
+** DONE Start looking into pptx stuff
+** TODO Generate an image
 
 * Issues
 ** TODO Slide dimensions
