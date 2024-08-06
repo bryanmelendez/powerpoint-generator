@@ -2,10 +2,11 @@ import os
 import slides
 
 
-def main():
-    # For testing:
-    ex_name = 'Bryan'
+# For testing:
+ex_name = 'Bryan'
 
+
+def main():
     pres = slides.Presentation()
 
     # Storing all of the slides in a list
@@ -21,6 +22,7 @@ def main():
     while options_left:
         current_option_pics = True
 
+        # TODO Move this cause it is making an extra slide at the end
         # Create a title page for each option iteration
         new_slide = slides.TitleSlide('{} Remodel Option {}'.format(ex_name, option_num).upper(),
                                       'layout concept design by cara mia designs'.upper())
