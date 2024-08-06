@@ -11,15 +11,19 @@
 ** DONE put a title on the image page
 ** DONE Loop through all images
 ** DONE Generate all powerpoint slides
-** TODO Fix the extra slide at the end issue
-** TODO Look into making an image class to make this easier
-** TODO Write image class
+** DONE Fix the extra slide at the end issue
+** DONE Look into making an generator class to make this easier
+** DONE Write generator class
 ** TODO Size the image
 ** TODO Slide dimensions
 ** TODO font sizes
+** TODO Theme
+** TODO font colors
 
-* Issues
+* Potential Issues
 ** TODO Slide dimensions
+** TODO different image file formats
+** TODO capitalization errors in file names
 
 * Long Term TODO
 ** DONE Read image files and parse titles

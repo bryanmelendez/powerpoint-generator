@@ -29,3 +29,9 @@
   - create a page
   - add title from tuple
   - add image from file path
+
+Issue: it creates the next option title page before it checks if there
+        are any more options
+
+Solution:
+        -

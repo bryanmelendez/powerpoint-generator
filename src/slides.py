@@ -3,8 +3,6 @@
 from pptx import Presentation
 from pptx.util import Inches
 
-EXAMPLE_IMAGES = '/home/bryan/Documents/documents/pptx_examples/'
-
 
 class Slide():
     SLD_LAYOUT_TITLE_SLIDE = 0
