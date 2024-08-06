@@ -7,7 +7,11 @@
 ** DONE arrays
 ** DONE data structures
 ** DONE Start looking into pptx stuff
-** TODO Generate an image
+** DONE Generate an image
+** TODO Size the image
+** TODO put a title on the image page
+** TODO Slide dimensions
+** TODO font sizes
 
 * Issues
 ** TODO Slide dimensions

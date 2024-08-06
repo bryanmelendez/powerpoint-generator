@@ -1,2 +1,4 @@
 *.pptx
 *.pptx#
+python_review
+src/__pycache__/
