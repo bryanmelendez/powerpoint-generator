@@ -4,6 +4,7 @@ import os
 import tkinter
 from tkinter import ttk
 from tkinter import filedialog
+from tkinter import *
 
 
 class GUI:
@@ -28,12 +29,12 @@ class GUI:
 
     def create_frame(self):
         self.__frm = ttk.Frame(self.__root, padding=10)
-        self.__frm.grid()
+        self.__frm.pack()
 
     def create_entry_boxes(self):
-        ttk.Label(self.__root, text='Insert Client Name').grid(row=1, column=0)
+        ttk.Label(self.__root, text='Insert Client Name').pack()
         self.__name_entry_box = ttk.Entry(self.__root,
-                                          textvariable=self.__name_entry_string).grid(row=1, column=1)
+                                          textvariable=self.__name_entry_string).pack()
 
     def submit(self):
         # Getting the string from the tk variable
@@ -57,19 +58,26 @@ class GUI:
         #update the gui so it shows the path
         print("Directory selected: {}".format(self.directory))
 
+    def set_status_message(self, message):
+        self.__status_message = Message(self.__root, text=message)
+        self.__status_message.config(bg='lightgreen')
+
     def create_gui_window(self):
         self.__root.geometry("750x250")
         self.create_frame()
 
         self.create_entry_boxes()
 
-        ttk.Label(self.__frm, text='Select the folder containing images').grid(row=0, column=0)
+        ttk.Label(self.__frm, text='Select the folder containing images').pack()
 
         # Folder search button
-        ttk.Button(self.__frm, text="Folder Search", command=self.folder_search).grid(row=0, column=1)
+        ttk.Button(self.__frm, text='Folder Search', command=self.folder_search).pack()
 
         # Submit button
-        ttk.Button(self.__frm, text="Submit", command=self.submit).grid(row=2, column=3)
+        ttk.Button(self.__frm, text='Submit', command=self.submit).pack()
+
+        self.set_status_message('Setup')
+        self.__status_message.pack()
 
     def start_gui(self):
         self.__root.mainloop()
