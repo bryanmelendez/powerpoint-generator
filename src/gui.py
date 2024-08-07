@@ -19,6 +19,7 @@ class GUI:
         # window frame
         self.__frm = None
         self.__status_message = None
+        self.__directory_message = None
 
         # Public vars
 
@@ -42,7 +43,7 @@ class GUI:
 
         if self.name == '' or self.directory == '':
             # convert this to gui message later
-            print("No name entered and/or directory selected")
+            self.set_status_message("No name entered and/or directory selected")
             return
 
         self.__root.destroy()
@@ -52,11 +53,14 @@ class GUI:
                                                  initialdir=os.path.expanduser("~"))
 
         if self.directory == None:
-            print("Error: no file selected")
+            self.set_directory_message("Error: no directory selected")
             return
 
         #update the gui so it shows the path
-        print("Directory selected: {}".format(self.directory))
+        self.set_directory_message("Directory selected: {}".format(self.directory))
+
+    def set_directory_message(self, message):
+        self.__directory_message = Message(self.__root, text=message)
 
     def set_status_message(self, message):
         self.__status_message = Message(self.__root, text=message)
@@ -72,6 +76,9 @@ class GUI:
 
         # Folder search button
         ttk.Button(self.__frm, text='Folder Search', command=self.folder_search).pack()
+
+        self.set_directory_message('No directory chosen')
+        self.__directory_message.pack()
 
         # Submit button
         ttk.Button(self.__frm, text='Submit', command=self.submit).pack()
@@ -94,8 +101,6 @@ gui = GUI()
 gui.create_gui_window()
 
 gui.start_gui()
-
-print(gui.get_client_name())
 
 
 '''

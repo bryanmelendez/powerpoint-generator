@@ -22,11 +22,12 @@
 ** TODO slides font colors
 ** TODO read tkinter docs
 ** DONE Make gui window
-** TODO entry box
+** TODO both entry boxes
 ** DONE Button
 ** DONE File system integration
-** TODO directory status message
-** TODO error message box
+** DONE directory status message
+** TODO error message box size
+** TODO updating message boxes
 ** TODO logo
 ** TODO button placement
 
