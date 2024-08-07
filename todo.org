@@ -20,13 +20,12 @@
 ** TODO slides font sizes
 ** TODO slides Theme
 ** TODO slides font colors
-** TODO read tkinter docs
+** DONE read tkinter docs
 ** DONE Make gui window
-** TODO both entry boxes
+** DONE both entry boxes
 ** DONE Button
 ** DONE File system integration
 ** DONE directory status message
-** TODO error message box size
 ** TODO updating message boxes
 ** TODO logo
 ** TODO button placement
@@ -49,14 +48,13 @@
 ** Tuesday
 - Image class
 - finish all core functionality
-- format the powerpoint
 ** Wednesday
-- look into error checking
-- start looking into Qt6
+- build gui
 ** Thursday
-- Write main gui functionality
-** Friday
 - Integrate gui with code
+** Friday
+- error checking
+- visual stuff
 ** Saturday
 - Test
 - Package
