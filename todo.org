@@ -14,14 +14,20 @@
 ** DONE Fix the extra slide at the end issue
 ** DONE Look into making an generator class to make this easier
 ** DONE Write generator class
+** TODO Center the page elements
 ** TODO Size the image
-** TODO Slide dimensions
+** DONE Slide dimensions
 ** TODO font sizes
 ** TODO Theme
 ** TODO font colors
+** TODO read tkinter docs
+** TODO Make gui window
+** TODO Textboxes
+** TODO Button
+** TODO File system integration
 
 * Potential Issues
-** TODO Slide dimensions
+** DONE Slide dimensions
 ** TODO different image file formats
 ** TODO capitalization errors in file names
 
@@ -38,8 +44,9 @@
 ** Tuesday
 - Image class
 - finish all core functionality
-** Wednesday
 - format the powerpoint
+** Wednesday
+- look into error checking
 - start looking into Qt6
 ** Thursday
 - Write main gui functionality

@@ -1,8 +1,13 @@
 import slides
 import os
+from pptx import Presentation
+from pptx.util import Inches
 
 
 class PowerpointGenerator:
+    slide_width = Inches(11)
+    slide_height = Inches(8.5)
+
     def __init__(self, client_name, image_directory):
         self.client_name = client_name
         self.image_directory = image_directory
@@ -76,6 +81,9 @@ class PowerpointGenerator:
             pic_letter = 'A'
 
     def generate_presentation(self, slides_list, pres):
+        pres.slide_width = self.slide_width
+        pres.slide_height = self.slide_height
+
         for slide in slides_list:
             slide.CreateSlide(pres)
             print("Creating slide titled: {}".format(slide.title_text))
