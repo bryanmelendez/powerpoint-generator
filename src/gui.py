@@ -1,9 +1,10 @@
 # GUI for powerpoint generator
 
 import os
-from tkinter import Tk, Message, ttk, filedialog, StringVar
+from tkinter import Tk, ttk, filedialog, StringVar
 from PIL import Image, ImageTk
 
+import sys
 
 class GUI:
     def __init__(self):
@@ -21,9 +22,16 @@ class GUI:
         # window frame
         self.__frm = None
         self.__status_message = None
+        self.__folder_label = None
         self.__directory_message = None
         self.__image_label = None
         self.__image_file = 'assets/logo.png'
+        # storing the photo in an instance
+        self.__photo = None
+        self.__folder_button = None
+        self.__submit_button = None
+        self.__save_file_label = None
+        self.__name_label = None
 
         # Public vars
 
@@ -37,13 +45,13 @@ class GUI:
         self.__frm.pack()
 
     def create_entry_boxes(self):
-        ttk.Label(self.__frm, text='Insert Client Name').pack()
+        self.__name_label = ttk.Label(self.__frm, text='Insert Client Name')
         self.__name_entry_box = ttk.Entry(self.__frm,
-                                          textvariable=self.__name_entry_string).pack()
+                                          textvariable=self.__name_entry_string)
 
-        ttk.Label(self.__frm, text='Save file as:').pack()
+        self.__save_file_label = ttk.Label(self.__frm, text='Save file as:')
         self.__save_file_entry_box = ttk.Entry(self.__frm,
-                                               textvariable=self.__save_file_string).pack()
+                                               textvariable=self.__save_file_string)
 
     def submit(self):
         # Getting the string from the tk variable
@@ -62,12 +70,12 @@ class GUI:
         self.directory = filedialog.askdirectory(mustexist=True,
                                                  initialdir=os.path.expanduser("~"))
 
-        if self.directory == None:
+        if self.directory is None:
             self.set_directory_message("Error: no directory selected")
             print("Error: no directory selected")
             return
 
-        #update the gui so it shows the path
+        # update the gui so it shows the path
         self.set_directory_message("Directory selected: {}".format(self.directory))
 
     def set_directory_message(self, message):
@@ -82,30 +90,44 @@ class GUI:
 
         # adding an image
         new_image = Image.open(self.__image_file)
-        photo = ImageTk.PhotoImage(new_image)
+        self.__photo = ImageTk.PhotoImage(new_image)
         # adding image to label
-        self.__image_label = ttk.Label(self.__frm, image=photo).pack()
+        self.__image_label = ttk.Label(self.__frm, image=self.__photo)
 
         self.create_entry_boxes()
 
-        ttk.Label(self.__frm, text='Select the folder containing images').pack()
+        self.__folder_label = ttk.Label(self.__frm, text='Select the folder containing images')
 
         # Folder search button
-        ttk.Button(self.__frm, text='Folder Search', command=self.folder_search).pack()
+        self.__folder_button = ttk.Button(self.__frm, text='Folder Search', command=self.folder_search)
 
-        self.__directory_message = ttk.Label(self.__frm, text='No directory chosen').pack()
+        self.__directory_message = ttk.Label(self.__frm, text='No directory chosen')
 
+        ref_count = sys.getrefcount(self.__directory_message)
+        print("Reference count of x: ", ref_count)
         # Submit button
-        ttk.Button(self.__frm, text='Submit', command=self.submit).pack()
+        self.__submit_button = ttk.Button(self.__frm, text='Submit', command=self.submit)
 
-        self.__status_message = ttk.Label(self.__frm, text="Press 'Submit' when ready").pack()
+        self.__status_message = ttk.Label(self.__frm, text="Press 'Submit' when ready")
+
+        # pack everything
+        self.__image_label.pack()
+        self.__name_label.pack()
+        self.__name_entry_box.pack()
+        self.__save_file_label.pack()
+        self.__save_file_entry_box.pack()
+        self.__folder_label.pack()
+        self.__folder_button.pack()
+        self.__directory_message.pack()
+        self.__submit_button.pack()
+        self.__status_message.pack()
 
     # TODO Make this better
     def start_gui(self):
         self.__root.mainloop()
 
     # Getter functions:
-       
+
     def get_client_name(self):
         return self.name
 
@@ -125,18 +147,3 @@ gui.start_gui()
 print(gui.get_client_name())
 print(gui.get_file_name())
 print(gui.get_directory_path())
-
-
-'''
-
-What do we need:
-
-- 2 textboxes - entry
-- 1 button
-- title
-- image of logo
-- spacing and window size
-- status messages - (tkinter message, green if success, red if error)
-- text boxes for instructions
-
-'''
