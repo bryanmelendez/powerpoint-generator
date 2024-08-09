@@ -63,7 +63,8 @@ class GUI:
         self.directory = filedialog.askdirectory(mustexist=True,
                                                  initialdir=os.path.expanduser("~"))
 
-        if self.directory == '()':
+        print("Directory: {}".format(self.directory))
+        if not os.path.exists(self.directory):
             self.set_directory_message("Error: no directory selected", 'red')
             print("Error: no directory selected")
             return
