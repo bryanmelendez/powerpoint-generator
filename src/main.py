@@ -1,6 +1,7 @@
 import slides
 import powerpoint_generator as pg
 import gui
+import os
 
 
 def main():
@@ -10,6 +11,7 @@ def main():
 
     client_name = app.get_client_name()
     image_directory = '{}/'.format(app.get_directory_path())
+    print(image_directory)
     save_name = app.get_file_name()
 
     # powerpoint
@@ -27,8 +29,9 @@ def main():
 
     # If slides are successful, save the file
     if len(slides_list):
-        print("Successful generation! Saving pptx")
-        pres.save('{}/{}.pptx'.format(image_directory, save_name))
+        save_path = os.path.join(image_directory, save_name)
+        print("Successful generation! Saving pptx at {}".format(save_path))
+        pres.save('{}.pptx'.format(save_path))
     else:
         print("No slides in list. Aborting program")
         # pop up error window

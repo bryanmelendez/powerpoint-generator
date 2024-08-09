@@ -26,7 +26,7 @@ class PowerpointGenerator:
 
             # Create title
             title = 'Option {} A'.format(option_num)
-            initial_check = '{}{}.jpg'.format(self.image_directory, title)
+            initial_check = '{}.jpg'.format(os.path.join(self.image_directory, title))
 
             print("Checking: {}".format(initial_check))
             if not os.path.exists(initial_check):
@@ -42,10 +42,11 @@ class PowerpointGenerator:
 
             slides_list.append(new_slide)
 
+            new_plan_view_title = 'Option {} plan view'.format(option_num)
             # if plan view exists put it here
             new_slide = slides.ImageSlide(
-                'Option {} Plan View'.format(option_num),
-                '{}Option {} plan view.jpg'.format(self.image_directory, option_num))
+                new_plan_view_title.upper(),
+                '{}.jpg'.format(os.path.join(self.image_directory, new_plan_view_title)))
 
             slides_list.append(new_slide)
 
@@ -54,12 +55,7 @@ class PowerpointGenerator:
                 # Update title
                 title = 'Option {} {}'.format(option_num, pic_letter)
 
-                # Generate image path
-                image_path = '{}Option {} {}.jpg'.format(
-                    self.image_directory,
-                    option_num,
-                    pic_letter)
-
+                image_path = '{}.jpg'.format(os.path.join(self.image_directory, title))
                 print(image_path)
 
                 # Check if path exists
@@ -80,6 +76,7 @@ class PowerpointGenerator:
 
             pic_letter = 'A'
 
+    # Generates a pptx slide for each object in slides_list
     def generate_presentation(self, slides_list, pres):
         pres.slide_width = self.slide_width
         pres.slide_height = self.slide_height

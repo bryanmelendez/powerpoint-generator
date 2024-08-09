@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Master TODO [25/34]
+* Master TODO [26/33]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -33,14 +33,13 @@
 ** DONE set save file path
 ** TODO error message from invalid directory
 ** TODO Either move each gui element to its own creation function, or move everything into the main creation function
-** TODO cross platform file paths
-** TODO start looking into the pyinstaller
+** DONE fix file paths
 
 * Potential Issues
 ** DONE Slide dimensions
 ** TODO different image file formats https://chatgpt.com/c/296b4e56-fbc0-4bf9-afc1-5962cbfbac97
 ** TODO capitalization errors in file names
-** TODO Path issues because windows and linux are different
+** DONE Path issues because windows and linux are different
 
 * Long Term TODO
 ** DONE Read image files and parse titles
