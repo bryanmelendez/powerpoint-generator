@@ -4,7 +4,6 @@ import os
 from tkinter import Tk, ttk, filedialog, StringVar, Message
 from PIL import Image, ImageTk
 
-import sys
 
 class GUI:
     def __init__(self):
@@ -88,7 +87,6 @@ class GUI:
         # adding image to label
         self.__image_label = ttk.Label(self.__frm, image=self.__photo)
 
-
         self.__name_label = ttk.Label(self.__frm, text='Client name:')
         self.__name_entry_box = ttk.Entry(self.__frm,
                                           textvariable=self.__name_entry_string)
@@ -97,29 +95,38 @@ class GUI:
         self.__save_file_entry_box = ttk.Entry(self.__frm,
                                                textvariable=self.__save_file_string)
 
-        self.__folder_label = ttk.Label(self.__frm, text='Select the folder containing images')
+        self.__folder_label = ttk.Label(self.__frm,
+                                        text='Select the folder containing images')
 
         # Folder search button
-        self.__folder_button = ttk.Button(self.__frm, text='Folder Search', command=self.folder_search)
+        self.__folder_button = ttk.Button(self.__frm,
+                                          text='Folder Search',
+                                          command=self.folder_search)
 
-        self.__directory_message = Message(self.__frm, text='No directory chosen')
+        self.__directory_message = Message(self.__frm,
+                                           text='No directory chosen',
+                                           width=10000, aspect=5000)
 
         # Submit button
-        self.__submit_button = ttk.Button(self.__frm, text='Submit', command=self.submit)
+        self.__submit_button = ttk.Button(self.__frm,
+                                          text='Submit',
+                                          command=self.submit)
 
-        self.__status_message = Message(self.__frm, text="Press 'Submit' when ready")
+        self.__status_message = Message(self.__frm,
+                                        text="Press 'Submit' when ready",
+                                        width=10000, aspect=5000)
 
         # pack everything
-        self.__image_label.pack()
+        self.__image_label.pack(pady=5)
         self.__name_label.pack()
-        self.__name_entry_box.pack()
+        self.__name_entry_box.pack(pady=5)
         self.__save_file_label.pack()
-        self.__save_file_entry_box.pack()
+        self.__save_file_entry_box.pack(pady=5)
         self.__folder_label.pack()
-        self.__folder_button.pack()
-        self.__directory_message.pack()
-        self.__submit_button.pack()
-        self.__status_message.pack()
+        self.__folder_button.pack(pady=5)
+        self.__directory_message.pack(pady=5)
+        self.__submit_button.pack(pady=5)
+        self.__status_message.pack(pady=5)
 
     # TODO Make this better
     def start_gui(self):
