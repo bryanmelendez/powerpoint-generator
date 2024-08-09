@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Master TODO [22/30]
+* Master TODO [23/31]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -14,12 +14,7 @@
 ** DONE Fix the extra slide at the end issue
 ** DONE Look into making an generator class to make this easier
 ** DONE Write generator class
-** TODO slides - Center the page elements
-** TODO slides - Size the image
 ** DONE Slide dimensions
-** TODO slides font sizes
-** TODO slides Theme
-** TODO slides font colors
 ** DONE read tkinter docs
 ** DONE Make gui window
 ** DONE both entry boxes
@@ -28,8 +23,14 @@
 ** DONE directory status message
 ** DONE updating message boxes
 ** DONE logo
+** TODO slides - Center the page elements
+** TODO slides - Size the image
+** TODO slides font sizes
+** TODO slides Theme
+** TODO slides font colors
 ** TODO button placement
-** TODO set save file path
+** TODO message box size
+** DONE set save file path
 ** TODO Either move each gui element to its own creation function, or move everything into the main creation function
 
 * Potential Issues

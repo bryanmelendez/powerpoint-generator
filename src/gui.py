@@ -40,6 +40,9 @@ class GUI:
         self.file_name = None
         self.directory = None
 
+        # make the window
+        self.create_gui_window()
+
     def create_frame(self):
         self.__frm = ttk.Frame(self.__root, padding=10)
         self.__frm.pack()
@@ -101,8 +104,6 @@ class GUI:
 
         self.__directory_message = Message(self.__frm, text='No directory chosen')
 
-        ref_count = sys.getrefcount(self.__directory_message)
-        print("Reference count of x: ", ref_count)
         # Submit button
         self.__submit_button = ttk.Button(self.__frm, text='Submit', command=self.submit)
 
@@ -134,14 +135,3 @@ class GUI:
 
     def get_directory_path(self):
         return self.directory
-
-
-# driver code
-gui = GUI()
-gui.create_gui_window()
-
-gui.start_gui()
-
-print(gui.get_client_name())
-print(gui.get_file_name())
-print(gui.get_directory_path())

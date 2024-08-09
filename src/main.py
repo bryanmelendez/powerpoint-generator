@@ -1,21 +1,19 @@
 import slides
 import powerpoint_generator as pg
-
-
-# params from gui:
-# client name
-# file path
-# save name
-
-# For testing:
-ex_name = 'Bryan'
-IMAGE_DIR = '/home/bryan/Documents/documents/pptx_examples/Example Exports/'
-save_name = 'test'
+import gui
 
 
 def main():
+    # user interface
+    app = gui.GUI()
+    app.start_gui()
+
+    client_name = app.get_client_name()
+    image_directory = '{}/'.format(app.get_directory_path())
+    save_name = app.get_file_name()
+
     # powerpoint
-    pp = pg.PowerpointGenerator(ex_name, IMAGE_DIR)
+    pp = pg.PowerpointGenerator(client_name, image_directory)
     pres = slides.Presentation()
 
     # Storing all of the slides in a list
@@ -27,7 +25,13 @@ def main():
     # add slides to presentation
     pp.generate_presentation(slides_list, pres)
 
-    pres.save('{}/{}.pptx'.format(IMAGE_DIR, save_name))
+    # If slides are successful, save the file
+    if len(slides_list):
+        print("Successful generation! Saving pptx")
+        pres.save('{}/{}.pptx'.format(image_directory, save_name))
+    else:
+        print("No slides in list. Aborting program")
+        # pop up error window
 
 
 if __name__ == "__main__":
