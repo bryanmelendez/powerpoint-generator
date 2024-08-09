@@ -27,7 +27,7 @@ def main():
     # add slides to presentation
     pp.generate_presentation(slides_list, pres)
 
-    pres.save('{}.pptx'.format(save_name))
+    pres.save('{}/{}.pptx'.format(IMAGE_DIR, save_name))
 
 
 if __name__ == "__main__":

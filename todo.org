@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Master TODO
+* Master TODO [22/30]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -26,14 +26,17 @@
 ** DONE Button
 ** DONE File system integration
 ** DONE directory status message
-** TODO updating message boxes
+** DONE updating message boxes
 ** DONE logo
 ** TODO button placement
+** TODO set save file path
+** TODO Either move each gui element to its own creation function, or move everything into the main creation function
 
 * Potential Issues
 ** DONE Slide dimensions
 ** TODO different image file formats
 ** TODO capitalization errors in file names
+** TODO Path issues because windows and linux are different
 
 * Long Term TODO
 ** DONE Read image files and parse titles
