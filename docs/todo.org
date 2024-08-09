@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Master TODO [25/34]
+* Master TODO [28/35]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -31,10 +31,11 @@
 ** DONE button placement
 ** DONE message box size
 ** DONE set save file path
-** TODO error message from invalid directory
-** TODO Either move each gui element to its own creation function, or move everything into the main creation function
-** TODO cross platform file paths
+** DONE error message from invalid directory
+** DONE Either move each gui element to its own creation function, or move everything into the main creation function
+** DONE cross platform file paths
 ** TODO start looking into the pyinstaller
+** TODO directory check if exists doesn't work
 
 * Potential Issues
 ** DONE Slide dimensions
@@ -59,13 +60,13 @@
 - build gui
 ** Thursday
 - Integrate gui with code
-- visual stuff
+- gui visual stuff
 ** Friday
 - error checking
-- test on windows
+- pptx visual stuff
 - package
 ** Saturday
-- Test
-- finish package
+- Test on windows
+- finish package based on tests
 ** Sunday
 - Release v1
