@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Master TODO [28/35]
+* Master TODO [29/36]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -36,6 +36,7 @@
 ** DONE cross platform file paths
 ** TODO start looking into the pyinstaller
 ** TODO directory check if exists doesn't work
+** DONE error window
 
 * Potential Issues
 ** DONE Slide dimensions

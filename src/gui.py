@@ -51,7 +51,7 @@ class GUI:
         self.name = self.__name_entry_string.get()
         self.file_name = self.__save_file_string.get()
 
-        if self.name == '' or self.directory == '' or self.file_name == '':
+        if self.name == '' or self.directory is None or self.file_name == '':
             # convert this to gui message later
             self.set_status_message("Error: missing an entry", 'red')
             print("Error: missing an entry")
@@ -64,7 +64,7 @@ class GUI:
                                                  initialdir=os.path.expanduser("~"))
 
         print("Directory: {}".format(self.directory))
-        if not os.path.exists(self.directory):
+        if not os.path.exists("{}".format(self.directory)):
             self.set_directory_message("Error: no directory selected", 'red')
             print("Error: no directory selected")
             return
