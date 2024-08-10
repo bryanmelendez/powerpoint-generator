@@ -1,6 +1,8 @@
 #+title: Todo
 
-* Master TODO [30/37]
+* Github - [[https://github.com/bryanmelendez/powerpoint-generator][Page not found · GitHub · GitHub]]
+
+* Master TODO [31/37]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -37,7 +39,7 @@
 ** TODO start looking into the pyinstaller
 ** DONE directory check if exists doesn't work
 ** DONE status window
-** TODO integrate status window
+** DONE integrate status window
 
 * Potential Issues
 ** DONE Slide dimensions
@@ -72,3 +74,5 @@
 - finish package based on tests
 ** Sunday
 - Release v1
+** Monday
+- Documentation

@@ -5,9 +5,6 @@ from pptx.util import Inches
 
 
 class PowerpointGenerator:
-    slide_width = Inches(11)
-    slide_height = Inches(8.5)
-
     def __init__(self, client_name, image_directory):
         self.client_name = client_name
         self.image_directory = image_directory
@@ -78,9 +75,9 @@ class PowerpointGenerator:
 
     # Generates a pptx slide for each object in slides_list
     def generate_presentation(self, slides_list, pres):
-        pres.slide_width = self.slide_width
-        pres.slide_height = self.slide_height
+        pres.slide_width = slides.Slide.slide_width
+        pres.slide_height = slides.Slide.slide_height
 
         for slide in slides_list:
-            slide.CreateSlide(pres)
+            slide.create_slide(pres)
             print("Creating slide titled: {}".format(slide.title_text))
