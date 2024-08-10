@@ -75,9 +75,6 @@ class PowerpointGenerator:
 
     # Generates a pptx slide for each object in slides_list
     def generate_presentation(self, slides_list, pres):
-        pres.slide_width = slides.Slide.slide_width
-        pres.slide_height = slides.Slide.slide_height
-
         for slide in slides_list:
             slide.create_slide(pres)
             print("Creating slide titled: {}".format(slide.title_text))
