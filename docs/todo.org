@@ -2,7 +2,7 @@
 
 * Github - [[https://github.com/bryanmelendez/powerpoint-generator][Page not found · GitHub · GitHub]]
 
-* Master TODO [35/38]
+* Master TODO [37/40]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -29,24 +29,26 @@
 ** DONE slides - Size the image
 ** DONE slides font sizes
 ** DONE slides Theme
-** TODO slides font colors
-** TODO adding the footer on plan view page
+** DONE slides font colors
+** DONE adding the footer on plan view page
 ** DONE button placement
 ** DONE message box size
 ** DONE set save file path
 ** DONE error message from invalid directory
 ** DONE Either move each gui element to its own creation function, or move everything into the main creation function
 ** DONE cross platform file paths
-** TODO start looking into the pyinstaller
 ** DONE directory check if exists doesn't work
 ** DONE status window
 ** DONE integrate status window
+** TODO fix image dimensions
+** TODO separate plan view and regular pages on template
+** TODO start looking into the pyinstaller
 
 * Potential Issues
 ** DONE Slide dimensions
-** TODO different image file formats https://chatgpt.com/c/296b4e56-fbc0-4bf9-afc1-5962cbfbac97
+** TODO different image file formats
 ** TODO capitalization errors in file names
-** TODO Path issues because windows and linux are different
+** TODO Path issues because windows and linux are different https://chatgpt.com/c/296b4e56-fbc0-4bf9-afc1-5962cbfbac97
 
 * Long Term TODO
 ** DONE Read image files and parse titles
@@ -69,10 +71,10 @@
 ** Friday
 - error checking
 - pptx visual stuff
-- package
 ** Saturday
+- finish pptx template
+- package
 - Test on windows
-- finish package based on tests
 ** Sunday
 - Release v1
 ** Monday
