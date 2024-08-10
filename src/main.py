@@ -31,7 +31,7 @@ def main():
     # If slides are successful, save the file
     if len(slides_list):
         save_path = os.path.join(image_directory, save_name)
-        status_message = "Successful generation! Saving pptx at {}".format(save_path)
+        status_message = "Successful generation! Saving pptx at:\n {}".format(save_path)
         print(status_message)
         pres.save('{}.pptx'.format(save_path))
     else:

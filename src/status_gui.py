@@ -15,7 +15,9 @@ class StatusGui:
         # Set labels for status info
         self.__status_label = ttk.Label(self.__frm,
                                         text=message,
-                                        font=Font(self.__root, 25))
+                                        font=Font(self.__root, 25),
+                                        anchor='center',
+                                        justify='center')
         self.__status_label.pack(pady=10)
 
         self.__prompt_label = ttk.Label(self.__frm,
