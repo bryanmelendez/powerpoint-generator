@@ -2,7 +2,7 @@
 
 * Github - [[https://github.com/bryanmelendez/powerpoint-generator][Page not found · GitHub · GitHub]]
 
-* Master TODO [31/37]
+* Master TODO [35/38]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -25,11 +25,12 @@
 ** DONE directory status message
 ** DONE updating message boxes
 ** DONE logo
-** TODO slides - Center the page elements
-** TODO slides - Size the image
-** TODO slides font sizes
-** TODO slides Theme
+** DONE slides - Center the page elements
+** DONE slides - Size the image
+** DONE slides font sizes
+** DONE slides Theme
 ** TODO slides font colors
+** TODO adding the footer on plan view page
 ** DONE button placement
 ** DONE message box size
 ** DONE set save file path
