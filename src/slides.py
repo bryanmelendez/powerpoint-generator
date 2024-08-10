@@ -40,6 +40,8 @@ class ImageSlide(Slide):
         image_slide_layout = pres.slide_layouts[self.SLD_LAYOUT_TITLE_AND_CONTENT]
         slide = pres.slides.add_slide(image_slide_layout)
 
+        # Debug template
+
         # for shape in slide.placeholders:
         #     print('%d %s' % (shape.placeholder_format.idx, shape.name))
 
