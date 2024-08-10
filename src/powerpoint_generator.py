@@ -39,10 +39,12 @@ class PowerpointGenerator:
 
             slides_list.append(new_slide)
 
+            # Plan view slide
             new_plan_view_title = 'Option {} plan view'.format(option_num)
             # if plan view exists put it here
             new_slide = slides.ImageSlide(
                 new_plan_view_title.upper(),
+                'Suggested layout option. Not for construction use.',
                 '{}.jpg'.format(os.path.join(self.image_directory, new_plan_view_title)))
 
             slides_list.append(new_slide)
@@ -58,7 +60,7 @@ class PowerpointGenerator:
                 # Check if path exists
                 if os.path.exists(image_path):
                     print("File exists")
-                    new_slide = slides.ImageSlide(title, image_path)
+                    new_slide = slides.ImageSlide(title, '', image_path)
                     slides_list.append(new_slide)
                 else:
                     print("Path does not exist. Breaking loop.")

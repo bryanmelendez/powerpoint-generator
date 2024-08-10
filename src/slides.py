@@ -9,6 +9,7 @@ class Slide():
     SLD_LAYOUT_PICTURE_WITH_CAPTION = 8
 
     PICTURE_PLACEHOLDER_IDX = 13
+    TEXT_PLACEHOLDER_IDX = 14
 
     def __init__(self, title_text):
         self.title_text = title_text
@@ -30,18 +31,19 @@ class TitleSlide(Slide):
 
 
 class ImageSlide(Slide):
-    def __init__(self, title_text, image_path):
+    def __init__(self, title_text, footer_text, image_path):
         self.image_path = image_path
+        self.footer_text = footer_text
         super().__init__(title_text)
 
     def create_slide(self, pres):
         image_slide_layout = pres.slide_layouts[self.SLD_LAYOUT_TITLE_AND_CONTENT]
         slide = pres.slides.add_slide(image_slide_layout)
 
-        for shape in slide.placeholders:
-            print('%d %s' % (shape.placeholder_format.idx, shape.name))
+        # for shape in slide.placeholders:
+        #     print('%d %s' % (shape.placeholder_format.idx, shape.name))
 
-        quit()
+        # quit()
 
         pic_placeholder = slide.placeholders[self.PICTURE_PLACEHOLDER_IDX]
         pic_placeholder.insert_picture(self.image_path)
@@ -49,5 +51,5 @@ class ImageSlide(Slide):
         title_placeholder = slide.shapes.title
         title_placeholder.text = self.title_text
 
-        # text_placeholder = slide.placeholders[2]
-        # text_placeholder.text = ''
+        text_placeholder = slide.placeholders[self.TEXT_PLACEHOLDER_IDX]
+        text_placeholder.text = self.footer_text
