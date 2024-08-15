@@ -1,6 +1,7 @@
 # Classes for making pptx slides
 from pptx import Presentation
 from pptx.util import Inches
+from PIL import Image
 
 
 class Slide():
@@ -48,7 +49,31 @@ class ImageSlide(Slide):
         # quit()
 
         pic_placeholder = slide.placeholders[self.PICTURE_PLACEHOLDER_IDX]
-        pic_placeholder.insert_picture(self.image_path)
+
+        img = Image.open(self.image_path)
+        img_width, img_height = img.size
+
+        placeholder_width = pic_placeholder.width
+        placeholder_height = pic_placeholder.height
+
+        width_scale = placeholder_width / img_width
+        height_scale = placeholder_height / img_height
+        scaling_factor = min(width_scale, height_scale)
+
+        new_width = int(img_width * scaling_factor)
+        new_height = int(img_height * scaling_factor)
+
+        # Get placeholder position
+        ph_left = pic_placeholder.left
+        ph_top = pic_placeholder.top
+
+        # Adjust the position of the image so it's centered within the placeholder
+        img_left = ph_left + (placeholder_width - new_width) // 2
+        img_top = ph_top + (placeholder_height - new_height) // 2
+
+        # Insert and resize the image
+        slide.shapes.add_picture(self.image_path, img_left, img_top, 
+                                 width=new_width, height=new_height)
 
         title_placeholder = slide.shapes.title
         title_placeholder.text = self.title_text
