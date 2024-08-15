@@ -35,7 +35,7 @@ class PowerpointGenerator:
             # Create a title page for each option iteration
             new_slide = slides.TitleSlide(
                 '{} Remodel\nOption {}'.format(self.client_name, option_num).upper(),
-                'layout concept design by cara mia designs'.upper())
+                'layout concept design by\n cara mia designs'.upper())
 
             slides_list.append(new_slide)
 
