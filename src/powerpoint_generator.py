@@ -43,7 +43,7 @@ class PowerpointGenerator:
             new_plan_view_title = 'Option {} plan view'.format(option_num)
             # if plan view exists put it here
             new_slide = slides.ImageSlide(
-                new_plan_view_title.upper(),
+                new_plan_view_title.title(),
                 'Suggested layout option. Not for construction use.',
                 '{}.jpg'.format(os.path.join(self.image_directory, new_plan_view_title)))
 

@@ -77,7 +77,7 @@ class ImageSlide(Slide):
         image_aspect_ratio = float(image_width) / float(image_height)
 
         # Get initial image placeholder left and top positions
-        pos_left, pos_top = picture.left, picture.top
+        pos_left, pos_top = Inches(1.5), picture.top
 
         picture.crop_top = 0
         picture.crop_left = 0
