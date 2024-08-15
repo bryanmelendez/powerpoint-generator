@@ -2,7 +2,7 @@
 
 * Github - [[https://github.com/bryanmelendez/powerpoint-generator][Page not found · GitHub · GitHub]]
 
-* Master TODO [37/40]
+* Master TODO [37/42]
 ** DONE Learn classes
 ** DONE class methods
 ** DONE for loop
@@ -41,6 +41,8 @@
 ** DONE status window
 ** DONE integrate status window
 ** TODO fix image dimensions
+** TODO fix font size in title
+** TODO Center the titles on image slides
 ** TODO separate plan view and regular pages on template
 ** TODO start looking into the pyinstaller
 
@@ -49,13 +51,6 @@
 ** TODO different image file formats
 ** TODO capitalization errors in file names
 ** TODO Path issues because windows and linux are different https://chatgpt.com/c/296b4e56-fbc0-4bf9-afc1-5962cbfbac97
-
-* Long Term TODO
-** DONE Read image files and parse titles
-** DONE Create powerpoint slides
-** DONE Create GUI
-** DONE Figure out how to grab paths to directories from gui file manager popup
-** TODO write unit tests
 
 * Schedule
 ** Monday
@@ -79,3 +74,8 @@
 - Release v1
 ** Monday
 - Documentation
+
+** Issues with template
+- [ ] title font size
+- [ ] center image slide titles
+- [ ] image sizes
