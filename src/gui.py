@@ -1,6 +1,7 @@
 # GUI for powerpoint generator
 
 import os
+import sys
 from tkinter import Tk, ttk, filedialog, StringVar, Message
 from PIL import Image, ImageTk
 
@@ -24,7 +25,7 @@ class GUI:
         self.__folder_label = None
         self.__directory_message = None
         self.__image_label = None
-        self.__image_file = os.path.abspath('assets/logo.png')
+        self.__image_file = self.get_image_asset()
         # storing the photo in an instance
         self.__photo = None
         self.__folder_button = None
@@ -41,6 +42,18 @@ class GUI:
 
         # make the window
         self.create_gui_window()
+
+    def get_image_asset(self):
+        if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+            print('running in a PyInstaller bundle')
+            image_file = os.path.join(sys._MEIPASS, 'assets/logo.png')
+        else:
+            print('running in a normal Python process')
+            image_file = os.path.abspath('assets/logo.png')
+
+        print(image_file)
+        return image_file
+
 
     def create_frame(self):
         self.__frm = ttk.Frame(self.__root, padding=10)

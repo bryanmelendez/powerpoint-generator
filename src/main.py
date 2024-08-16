@@ -3,17 +3,31 @@ import powerpoint_generator as pg
 import gui
 import status_gui
 import os
+import sys
+
+
+def get_template():
+    if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+        print('running in a PyInstaller bundle')
+        template = os.path.join(sys._MEIPASS, 'assets/template.pptx')
+    else:
+        print('running in a normal Python process')
+        template = os.path.abspath('assets/template.pptx')
+
+    return template
 
 
 def main():
     # user interface
     app = gui.GUI()
+
+    template = get_template()
+
     app.start_gui()
 
     client_name = app.get_client_name()
-    image_directory = '{}/'.format(app.get_directory_path())
+    image_directory = os.path.join(app.get_directory_path())
     print(image_directory)
-    template = os.path.abspath('assets/template.pptx')
     print(template)
     save_name = app.get_file_name()
 
