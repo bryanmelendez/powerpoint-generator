@@ -24,7 +24,7 @@ class GUI:
         self.__folder_label = None
         self.__directory_message = None
         self.__image_label = None
-        self.__image_file = 'assets/logo.png'
+        self.__image_file = os.path.abspath('assets/logo.png')
         # storing the photo in an instance
         self.__photo = None
         self.__folder_button = None

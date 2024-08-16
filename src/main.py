@@ -13,7 +13,7 @@ def main():
     client_name = app.get_client_name()
     image_directory = '{}/'.format(app.get_directory_path())
     print(image_directory)
-    template = 'assets/template.pptx'
+    template = os.path.abspath('assets/template.pptx')
     print(template)
     save_name = app.get_file_name()
 
