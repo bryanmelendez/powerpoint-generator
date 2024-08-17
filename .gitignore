@@ -1,4 +1,4 @@
 src/__pycache__/
 build
-dist
-main.spec
+powerpoint-generator
+powerpoint-generator.spec

@@ -1,4 +1,7 @@
 ### Todo for cross platform packaging
-- [ ] replace all image searches with os.path.join
-- [ ] fix the dependencies issue
+- [x] fix the dependencies issue
+- [ ] generate windows .exe
 - [ ] test on windows
+- [ ] readme
+- [ ] code documentation
+- [ ] run it through a lot of tests
