@@ -1,7 +1,5 @@
 src/__pycache__/
 build
-powerpoint-generator-linux
-powerpoint-generator-linux.spec
 dist
-powerpoint-generator-windows.spec
+*.spec
 
