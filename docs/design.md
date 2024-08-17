@@ -1,24 +1,21 @@
-#+title: Design
-
-* Design
+### Design
 - Option Title Page
 - As built (optional)
 - Option Plan view
   - Suggested layout option. Not for construction use.
 - Option pages (variable amount)
 
-* Tools
+### Tools
 - Python
-- Qt6
+- Tkinter 
 - python-pptx
 
-* Resources
+### Resources
 - https://stackoverflow.com/questions/2933/create-a-directly-executable-cross-platform-gui-app-using-python
 - https://python-pptx.readthedocs.io/en/latest/
 
 
-* Pseudocode
-
+### Pseudocode
 - create the presentation
 - search for image files within image directory
   - create tuples with the image path
