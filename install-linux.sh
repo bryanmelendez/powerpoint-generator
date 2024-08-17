@@ -1,1 +1,1 @@
-pyinstaller --onefile --name powerpoint-generator-linux --add-data=assets/*:assets src/main.py --hidden-import='PIL._tkinter_finder' --noconsole
+pyinstaller --onefile --name powerpoint-generator-v0-1-1-linux --add-data=assets/*:assets src/main.py --hidden-import='PIL._tkinter_finder' --noconsole
